@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Books Books</title>
+    <link rel="stylesheet" href="bootstrap.css">
+  </head>
+  <body>
+    <div class="text-center">
+      <button id="showBooksButton" onclick="menuButtonClick(1)" type="button" class="btn btn-primary">Show all books</button>
+      <button id="addBooksButton" onclick="menuButtonClick(2)" type="button" class="btn btn-primary">Add books</button>
+      <button id="requestAPIKey" onclick="fetchAPIKey()" type="button" class="btn btn-primary">Request new API Key</button> 
+      <p id="keyResult">f</p>
+      <p id="containerStart">Hello and welcome!</p>
+    </div> 
+      <div id="containerBookList">
+        <table id="bookTable" class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Author</th>
+              <th scope="col">Title</th>
+              <th scope="col">Delete</th>
+              <th scope="col">Edit</th>
+            </tr>
+          </thead>
+            <tbody id="dynamicListOfBooks">              
+            </tr>       
+          </tbody>
+        </table>
+        <button id="updateButton" type="button" class="btn btn-primary btn-lg btn-block">Update booklist</button>
+      </div>
+      <div id="containerAddBooks">
+        <div class="form-group">
+          <label for="authorInput">Author</label>
+          <input type="text" class="form-control" id="authorInput" placeholder="Author">
+        </div>
+        <div class="form-group">
+          <label for="titleInput">Title</label>
+          <input type="text" class="form-control" id="titleInput" placeholder="Title">
+        </div>
+        <button id="saveButton" type="button" class="btn btn-primary btn-lg btn-block">Save book</button>
+      </div>
+
+     <div class="col d-flex justify-content-center text-center">
+        <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+          <div class="card-header">Status message</div>
+          <div class="card-body">
+            <p class="card-text" id="statusMessageCard"> </p>
+          </div>
+        </div>
+       
+      </div>
+          <script src="script.js"></script>
+  </body>
+</html>
